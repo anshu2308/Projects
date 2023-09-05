@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+Form{
+	background-color:brgb(128, 255, 0);
+	color:rgb(255, 128, 128);
+}
+
+body{
+		background-image:"book.jpg";
+}

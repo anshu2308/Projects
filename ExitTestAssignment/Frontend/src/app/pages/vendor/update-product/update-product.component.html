@@ -1,0 +1,46 @@
+<mat-card>
+    <h1 class="text-center">Update Product Details</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <form [formGroup]="productForm">
+                    <div class="row"><mat-form-field class="full-width" appearance="outline"><input
+                                [(ngModel)]="product.pName" name="pName" matInput
+                                formControlName="pName"><mat-label>Product
+                                Name</mat-label></mat-form-field></div>
+                    <div class="row"><mat-form-field class="full-width" appearance="outline"><textarea
+                                [(ngModel)]="product.pDescription" name="pDescription"
+                                formControlName="pDescription"
+                                matInput></textarea><mat-label>Description</mat-label></mat-form-field>
+                    </div>
+                    <div class="row">
+                        <mat-form-field appearance="outline"><input formControlName="costPrice"
+                                [(ngModel)]="product.costPrice" name="costPrice" matInput><mat-label>
+                                Price</mat-label></mat-form-field>
+                        <mat-form-field class="ml-10" appearance="outline"><input formControlName="discount"
+                                [(ngModel)]="product.discount" name="discount"
+                                matInput><mat-label>Discount</mat-label></mat-form-field>
+
+                    </div>
+                    <div class="row">
+                        <mat-form-field appearance="outline"><input formControlName="pCode"
+                                [(ngModel)]="product.pCode" name="pCode" matInput><mat-label>Product
+                                Code</mat-label></mat-form-field>
+                        <mat-form-field class="ml-10" appearance="outline">
+                            <mat-label>Category</mat-label>
+                            <mat-select formControlName="category" [(ngModel)]="product.category.cid" name="category">
+                                <mat-option *ngFor="let c of categories" [value]="c.cid">
+                                    {{c.name}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                        </div>
+                        <div class="container  ml-20 text-center">
+                            <button (click)="updateProduct()" mat-raised-button color="primary">Update</button>
+                            <button type="reset" mat-raised-button class="ml-20 clear">Reset</button>
+                        </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</mat-card>

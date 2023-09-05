@@ -1,0 +1,26 @@
+.profile-image{
+    max-width:150px;
+    max-height:150px;
+    border-radius:50%;
+    border:2px solid #ff4081;
+  
+}
+.table{
+    width:100%;
+  border:1px outset rgba(208, 202, 204, 0.6);
+  border-radius:2px;
+  
+}
+
+.table tr td{
+    padding:12px 50px;
+    border:1px solid rgb(242, 234, 234);
+}
+.heading{
+    font-family:monospace;
+    color: #ff4081;
+    
+}
+.close{
+    background-color: #f5bbce;
+}

@@ -1,0 +1,29 @@
+<mat-toolbar color="accent">
+    <button *ngIf="!isLoggedIn" routerLink="" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+        <mat-icon>home</mat-icon>
+    </button>
+    <div class="mt-10 mr-20" *ngIf="isLoggedIn">
+        <mat-icon >shop</mat-icon> 
+    </div>
+    <!-- <button *ngIf="isLoggedIn" routerLink="../products" mat-icon-button class="example-icon"
+        aria-label="Example icon-button with menu icon">
+        <mat-icon>home</mat-icon>
+    </button> -->
+    <span>Ecommerce MarkatePlace</span>
+    <span  class="example-spacer "></span>
+    <button *ngIf="!isLoggedIn" routerLink="login" mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+         Login
+    </button>
+    <button *ngIf="!isLoggedIn "  routerLink="signup/2" mat-icon-button class="mr-20 ml-20 example-icon" aria-label="Example icon-button with share icon">
+        Register
+    </button>
+
+    <button *ngIf=" isLoggedIn && user"  routerLink="/vendor/profile" mat-icon-button class="example-icon mr-20 favorite-icon"
+        aria-label="Example icon-button with heart icon">
+       Hi, {{_login.getUser().username}}
+    </button>
+    <button *ngIf="isLoggedIn" (click)="logout()" routerLink="" mat-icon-button class="example-icon favorite-icon ml-20 mr-20"
+        aria-label="Example icon-button with heart icon">
+        Logout
+    </button>
+</mat-toolbar>

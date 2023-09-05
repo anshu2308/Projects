@@ -1,0 +1,42 @@
+.example-spacer {
+    flex: 1 1 auto;
+   
+}
+mat-toolbar {
+    height: 100px;
+    background: linear-gradient(90deg, hsla(205, 46%, 30%, 1)0%, hsla(260, 29%, 36%, 1)100%);
+    color: white;
+box-shadow: 0px 5px 5px -3px rgb(0 0 0 / 20%),
+        0px 8px 10px 1px rgb(0 0 0 / 14%),
+        0px 3px 14px 2px rgb(0 0 0 / 12%)
+}
+h1{
+    font-size:40px;
+}
+.btn1:hover{
+ height:2.5rem;
+ width:6rem;
+
+}
+.btn{
+    margin-left:2rem;
+    border:1px solid black;
+  width:5rem;
+}
+.btn2{
+    background:rgb(196, 192, 192);
+}
+.btn2:hover {
+    background: rgb(171, 168, 168);
+}
+mat-card{
+   width:60rem;
+   margin:6rem;
+    background: linear-gradient(90deg, hsla(205, 46%, 30%, 1)0%, hsla(260, 29%, 36%, 1)100%);
+        color: white;
+        box-shadow: 0px 5px 5px -3px rgb(0 0 0 / 20%),
+            0px 8px 10px 1px rgb(0 0 0 / 14%),
+            0px 3px 14px 2px rgb(0 0 0 / 12%);
+   border-radius:1rem;
+
+        }

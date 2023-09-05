@@ -1,0 +1,5 @@
+mat-card{
+    height: 100% !important;
+    /* max-height:fit-content */
+    max-height: 50yh;
+}

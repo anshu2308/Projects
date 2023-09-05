@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <style>
+        footer {
+            position: fixed;
+            padding: 10px 10px 0px 10px;
+            bottom: 0;
+            width: 100%;
+            /* Height of the footer*/
+            height: 40px;
+            background: rgb(227, 101, 101);
+        }
+    
+        .header {
+            /* position: fixed; */
+            padding: 10px 10px 0px 10px;
+            top: 0;
+            width: 100%;
+            /* Height of the footer*/
+            height: 100px;
+            background: rgb(227, 101, 101);
+    
+        }
+        body{
+background-color: rgb(220, 153, 153);
+        }
+        .btn{
+            background:rgb(255, 252, 252);
+            margin-top:10rem;
+            padding:10rem;
+            border-radius: 0px 50px 0px 50px;
+     border: 2px inset rgb(227, 101, 101) ;
+        }
+        .btn:hover{
+            background-color:rgb(227, 101, 101) ;
+             border: 2px inset rgb(213, 210, 210) ;
+        
+        }
+        a:hover{
+             color:white;
+             font-size: large;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header text-center">
+
+        <mat-toolbar>
+          
+            <span>
+                <h1>Result Management System</h1>
+            </span>
+            <span class="example-spacer"></span>
+
+        </mat-toolbar>
+    </div>
+    <div class="container">
+        <div class="row">
+            <button class="teacher btn col-md-offset-1 col-md-4" ><strong><a href="student/login">Login <br> As<br> Student</a></strong></button>
+            <button class="student btn  col-md-offset-2 col-md-4" ><strong><a href="teacher/login">Login<br> As<br>Teacher</a></strong></button>
+
+        </div>
+    </div>
+<footer class="text-center">&copy;Copyright 2020-2021 by Fresher Training</footer>
+</body>
+
+</html>

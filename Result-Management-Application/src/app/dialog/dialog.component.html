@@ -1,0 +1,39 @@
+<h1 mat-dialog-title>Add result Form</h1>
+<div mat-dialog-content>
+<form [formGroup]="resultForm">
+   
+        <mat-form-field appearance="outline">
+            <mat-label>Roll No</mat-label>
+            <input formControlName="RollNo" matInput placeholder="Enter Roll No">
+        <span style="color:red" *ngIf="rollNo && rollNo.invalid && rollNo.touched">**Invalid</span>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Name</mat-label>
+            <input formControlName="Name" matInput placeholder="Enter Name">
+        <span style="color:red"   *ngIf="name && name.invalid && name.touched">**Invalid</span>
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="example-form-field">
+            <mat-label>Choose a date</mat-label>
+            <input formControlName="DOB" matInput [matDatepicker]="datepicker">
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle matIconSuffix [for]="datepicker"></mat-datepicker-toggle>
+            <mat-datepicker #datepicker>
+                <mat-datepicker-actions>
+                    <button mat-button matDatepickerCancel>Cancel</button>
+                    <button mat-raised-button color="primary" matDatepickerApply>Apply</button>
+                </mat-datepicker-actions>
+            </mat-datepicker>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Score</mat-label>
+            <input formControlName="Score" matInput placeholder="Enter Score">
+        <span style="color:red" *ngIf="score && score.invalid && score.touched">**Invalid</span>
+        </mat-form-field>
+      
+</form>
+</div>
+<div mat-dialog-action [align]="'end'">
+    <button mat-raised-button color="warn" mat-dialog-close>Close</button>
+    <button [disabled]="resultForm.invalid" style="margin-left:8px;" mat-raised-button color="primary" (click)="addResult()">{{actionBtn}}</button>
+
+</div>

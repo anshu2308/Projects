@@ -1,0 +1,25 @@
+<a href="/teacher/teacherView" class="ml-5" style="margin-top:5px;"><span class="glyphicon glyphicon-chevron-left mt-5"></span>Back</a>
+<h4>Editing Form for Student :<%= student.name %><%= student.rollno %><%= student.score%>
+</h4>
+<form method="POST" class="addStu" autocomplete="off">
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Name : </label>
+        <input type="text" name="name" required class="form-control" value="<%= student.name  %> " id="exampleInputEmail1">
+    </div>
+    <div class="mb-3">
+        <label for="rollno" class="form-label">Roll No. : </label>
+        <input type="text" name="rollno" value="<%=student.rollno%> " required class="form-control"
+            id="rollno">
+    </div>
+
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Date of Birth : </label>
+        <input type="date" name="Dateofbirth" value="<%= student.Dateofbirth %> " required class="form-control" id="exampleInputEmail1">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Score : </label>
+        <input type="text" name="score" value="<%= student.score  %> " required class="form-control"
+            id="exampleInputEmail1">
+    </div>
+    <button type="submit" class="btn btn-success">Update</button>
+</form>

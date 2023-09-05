@@ -1,0 +1,56 @@
+.card {
+    margin: 20px;
+    width:15rem;
+ 
+}
+.card:hover{
+    background-color:#f6d5e0;
+    border:1px outset #811a3e;
+}
+
+/* .parent{
+    min-height: 100%;
+} */
+mat-card-title {
+    margin-left: -20px;
+}
+
+mat-card-subtitle {
+    margin-left: -20px;
+    max-width: 80px;
+}
+
+.search-form{
+    text-align:end;
+}
+
+h1{
+font-family: monospace;
+    color: #ff4081;
+}
+.price {
+    font-size: large;
+    font-weight: 800;
+    color: rgb(222, 181, 50);
+}
+
+.description {
+    color: grey;
+    margin-top: 20px;
+}
+
+span {
+    font-size: medium;
+    line-height: 3ch;
+}
+
+mat-card-title {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.scroll{
+    overflow-y: auto;
+    max-height: 100%;
+    overflow-x:hidden;
+    height: 32.6rem;
+}

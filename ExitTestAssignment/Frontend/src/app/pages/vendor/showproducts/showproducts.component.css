@@ -1,0 +1,48 @@
+.card{
+    margin:20px;
+    width:15rem;
+}
+
+
+p{
+    line-height: 5px;
+}
+mat-card-title {
+    margin-left: -20px;
+}
+mat-card-subtitle{
+    margin-left: -20px;
+    max-width:80px;
+}
+img{
+    margin-right:15px;
+    border-radius:50%;
+    float:right;
+}
+.heading {
+    font-family: monospace;
+    color: #ff4081;
+
+}
+.price {
+    font-size: large;
+    font-weight: 800;
+    color:rgb(222, 181, 50);
+}
+.description{
+    color:grey;
+    margin-top: 20px;
+}
+span{
+font-size: medium;
+line-height: 3ch;
+}
+mat-card-title{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.scroll{
+    overflow-y: auto;
+    max-height:100%;
+    height: 32.6rem;
+}

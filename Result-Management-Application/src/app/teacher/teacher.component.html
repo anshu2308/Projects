@@ -1,0 +1,67 @@
+<div class="header">
+    <mat-toolbar>
+        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <span ><h1>Library Management System</h1></span>
+        <span class="example-spacer"></span>
+<button class="btn1" mat-raised-button  routerLink="">Log out</button>
+    </mat-toolbar>
+</div>
+<div class="container">
+    <button class="addresult" mat-raised-button color="warn" (click)="openDialog()">Add Result</button>
+  
+    <div style="margin-top:10px">
+        <mat-form-field>
+            <mat-label>Filter</mat-label>
+            <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia" #input>
+        </mat-form-field>
+
+        <div class="mat-elevation-z8">
+            <table  mat-table [dataSource]="dataSource" matSort>
+
+                <ng-container matColumnDef="RollNo">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Roll No </th>
+                    <td mat-cell *matCellDef="let row"> {{row.RollNo}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="Name">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Name</th>
+                    <td mat-cell *matCellDef="let row"> {{row.Name}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="DOB">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> DOB </th>
+                    <td mat-cell *matCellDef="let row"> {{row.DOB|date}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="Score">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header>Score</th>
+                    <td mat-cell *matCellDef="let row"> {{row.Score}} </td>
+                </ng-container>
+                <ng-container  matColumnDef="Action">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header>Action</th>
+                    <td  mat-cell *matCellDef="let row">
+                     
+                        <button  mat-icon-button (click)="editResult(row)" color="primary">
+                            <mat-icon >edit</mat-icon>
+                        </button>
+                        <button mat-icon-button color="warn" (click)="deleteResult(row.id)">
+                            <mat-icon>delete</mat-icon>
+                        </button>
+                     
+                    </td>
+                </ng-container>
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+                <tr class="mat-row" *matNoDataRow>
+                    <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+                </tr>
+
+            </table>
+            <mat-paginator [pageSizeOptions]="[1,2,3,5, 10]" aria-label="Select page of users"></mat-paginator>
+        </div>
+    </div>
+</div>
+<router-outlet></router-outlet>

@@ -1,0 +1,43 @@
+<mat-card *ngIf="user">
+    <h3 class="text-center heading"><strong>YOUR PROFILE DETAILS</strong></h3>
+   
+    <mat-card-content>
+        <div class="bootstrap-wrapper">
+            <div class="container">
+                <div class="container text-center">
+                    <img class="profile-image"
+                        src="https://media.istockphoto.com/vectors/default-profile-picture-avatar-photo-placeholder-vector-illustration-vector-id1223671392?k=6&m=1223671392&s=170667a&w=0&h=zP3l7WJinOFaGb2i1F4g8IS2ylw0FlIaa6x3tP9sebU="
+                        alt="" />
+                    <h1><strong>{{_login.getUser().username}}</strong></h1>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-10 offset-md-1">
+                     <table  class="table border">
+                        <tr>
+                            <td><b>Name</b></td>
+                            <td>{{_login.getUser().username}}</td>
+                        </tr>
+                        <tr>
+                            <td><b>UserId</b></td>
+                            <td>{{_login.getUser().id}}</td>
+                        </tr>
+                        <tr>
+                            <td><b>EmailId</b></td>
+                            <td>{{_login.getUser().emailId}}</td>
+                        </tr>
+                        <tr *ngIf="_login.getUser().phone">
+                            <td><b>Phone</b></td>
+                            <td>{{_login.getUser().phone}}</td>
+                        </tr>
+                     </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </mat-card-content>
+    <mat-card-content class="text-center ">
+        <!-- <button mat-raised-button color="primary">UPDATE</button> -->
+        <button *ngIf="role=='Vendor'" class="ml-20 close" routerLink ="/vendor/products" mat-raised-button>CLOSE</button>
+<button *ngIf="role=='Customer'" class="ml-20 close" routerLink="/customer/products" mat-raised-button>CLOSE</button>  </mat-card-content>
+</mat-card>

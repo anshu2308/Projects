@@ -1,0 +1,35 @@
+<mat-card class="parent scroll">
+    <h1 class="heading text-center">Your Products</h1>
+    <div class="row">
+    <mat-card class="card" *ngFor="let product of products">
+        <mat-card-header>
+        <mat-card-title-group>
+            <mat-card-title>{{product.pName}}</mat-card-title>
+            <mat-card-subtitle>{{product.pDescription}}</mat-card-subtitle>
+            
+            <img mat-card-sm-image *ngIf="!product.image"  src="https://material.angular.io/assets/img/examples/shiba2.jpg">
+            <img *ngIf="product.image" mat-card-sm-image [src]="'data: image / jpeg; base64, ' + product.image|safeUrl">
+        </mat-card-title-group>    
+    </mat-card-header>
+        <mat-card-content>
+            <!-- <p class="description">{{product.pDescription}}</p> -->
+            <p class="realprice"><sup>₹</sup><del>{{product.costPrice}}</del> <span>({{product.discount}} %off)</span></p>
+            <!-- <p class="discount">{{product.discount}}%</p> -->
+            <p class="price">₹ {{product.price}}</p>
+            
+        </mat-card-content >
+        <mat-card-actions>
+            <button [routerLink]="'/vendor/update-product/'+product.id" mat-button color="primary">Edit</button>
+            <button (click)="delete(product.id)" mat-button color="primary">Delete</button>
+        </mat-card-actions>
+       
+    </mat-card>
+   
+    </div >
+    <div class="text-center">
+        <button routerLink="/vendor/save-product" mat-raised-button color="primary" class="mr-20 ml-20 example-icon"
+            aria-label="Example icon-button with share icon">Add Product
+        </button>
+    </div>
+</mat-card>
+

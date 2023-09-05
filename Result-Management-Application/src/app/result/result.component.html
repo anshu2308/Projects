@@ -1,0 +1,32 @@
+<body>
+    <h1 mat-dialog-title>
+        Result</h1>
+    <hr>
+    <div mat-dialog-content>
+        <form [formGroup]="result">
+    
+            <label>Roll No:</label>
+            <mat-form-field appearance="outline">
+                <input formControlName="RollNo" matInput readonly>
+            </mat-form-field>
+            <mat-label>Name:</mat-label>
+            <mat-form-field appearance="outline">
+                <input formControlName="Name" matInput readonly>
+            </mat-form-field>
+            <mat-label>DOB:</mat-label>
+            <mat-form-field appearance="outline" class="example-form-field" readonly>
+                <input formControlName="DOB" matInput readonly>
+    
+            </mat-form-field>
+            <mat-label>Score:</mat-label>
+            <mat-form-field appearance="outline">
+                <input formControlName="Score" matInput readonly>
+            </mat-form-field>
+    
+        </form>
+    </div>
+    <div mat-dialog-action [align]="'end'">
+        <button mat-raised-button color="warn" mat-dialog-close>Close</button>
+    
+    </div>
+</body>

@@ -1,0 +1,45 @@
+<mat-card>
+   
+    <h1 class="text-center">Add Product Form</h1>
+    <div class="container">
+        <div class="row" >
+            <div class="col-md-6 offset-md-3">
+                <form [formGroup]="productForm">
+                    <div class="row"><mat-form-field class="full-width" appearance="outline"><input [(ngModel)]="productData.pName" name="pName"
+                            matInput formControlName="pName" ><mat-label>Product
+                            Name</mat-label></mat-form-field></div>  <div class="row"><mat-form-field class="full-width" appearance="outline"><textarea [(ngModel)]="productData.pDescription"
+                        name="pDescription" formControlName="pDescription" matInput></textarea><mat-label>Description</mat-label></mat-form-field>
+</div>
+                  <div class="row">
+                    <mat-form-field appearance="outline"><input formControlName="costPrice" [(ngModel)]="productData.costPrice" name="costPrice" matInput><mat-label>
+                            Price</mat-label></mat-form-field>
+                    <mat-form-field class="ml-10" appearance="outline"><input formControlName="discount" [(ngModel)]="productData.discount" name="discount"
+                            matInput><mat-label>Discount</mat-label></mat-form-field>
+
+                  </div>
+ <div class="row">
+                    <mat-form-field appearance="outline"><input formControlName="pCode" [(ngModel)]="productData.pCode" name="pCode" matInput><mat-label>Product
+                            Code</mat-label></mat-form-field>
+                    <mat-form-field class="ml-10" appearance="outline">
+                        <mat-label>Category</mat-label>
+                        <mat-select formControlName="category" [(ngModel)]="productData.category" name="category">
+                            <mat-option *ngFor="let c of categories" [value]="c">
+                                {{c.name}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+ </div>
+                    <input required name="image" type="file" (change)="onImageUpload($event)">
+                    <div class="container mt-20 text-center">
+                        <button (click)="addProduct()"  mat-raised-button color="primary">Add</button>
+                        <button type="reset" mat-raised-button class="ml-20 clear">Reset</button>
+                    </div>
+
+                </form>
+
+
+
+            </div>
+        </div>
+    </div>
+</mat-card>

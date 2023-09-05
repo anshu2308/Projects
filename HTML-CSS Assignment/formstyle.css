@@ -1,0 +1,126 @@
+.panel-form {
+    border-right-color: black;
+    border-left-color: black;
+
+}
+
+@media screen and (min-width: 990px) {
+    form {
+        border-right: 2px solid rgb(90, 222, 173);
+        border-bottom: none;
+    }
+
+}
+
+@media screen and (max-width: 990px) {
+    form {
+        border-right: none;
+        border-bottom: 2px solid rgb(90, 222, 173);
+    }
+
+}
+
+
+
+img {
+    height: 110px;
+    width: 150px;
+    padding-left: 30px;
+    object-fit: cover;
+}
+
+.panel-form>.panel-heading {
+    background-color: rgb(90, 222, 173);
+    color: white;
+    font-weight: bold;
+    font-size: large;
+    border-top: 2px solid rgb(25, 145, 105);
+    border-bottom: 2px solid rgb(25, 145, 105);
+}
+
+.panel-form>.panel-footer {
+    background-color: rgb(90, 222, 173);
+    color: white;
+    border-top: 2px solid rgb(25, 145, 105);
+    border-bottom: 2px solid rgb(25, 145, 105);
+}
+
+#form {
+    margin-bottom: 70px;
+}
+
+.Error-Message {
+    color: red;
+    visibility: hidden;
+}
+
+.btn {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 15px;
+    font-weight: bold;
+}
+
+#enroll-submit {
+    background-color: blue;
+}
+
+.form-check-input {
+    accent-color: blue;
+}
+
+#Enrolled-students {
+    font-size: large;
+
+}
+
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 20px;
+    visibility: hidden;
+    border: 1px solid black;
+
+}
+
+.table {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    max-height: 300px;
+    width: 470px;
+    display: block;
+    object-fit: cover;
+
+}
+
+.table>tr:nth-child(odd) {
+    background-color: #136fcb;
+}
+
+
+th,
+td {
+    border: 2px solid rgb(115, 116, 26);
+}
+
+th {
+    color: white;
+    background-color: rgb(190, 190, 45);
+
+}
+
+#display,
+.newenroll {
+    animation: fadeIn 5s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0%;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+}

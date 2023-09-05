@@ -1,0 +1,36 @@
+
+<h2 class="text-center">My Result</h2>
+<div class="container">
+    <table class="table text-center " >
+      
+            <tr>
+                <td ><strong>Roll no.</strong></td><td>
+                    <%= one.rollno %>
+                </td></tr>
+               <tr> <td ><strong>Name</strong></td><td>
+                <%= one.name %>
+            </td</tr>
+               <tr> <td ><strong>Date of birtd</strong></td><td>
+                <%= one.Dateofbirth %>
+            </td></tr>
+               <tr> <td ><strong>Score</strong></td><td>
+                <%= one.score %>
+            </td></tr>
+       
+    </table>
+
+        <button class="btn btn-primary mr-5 text-center"><a href="/student/login"
+                style="margin-top:5px;color:white;">Close</a></button>
+  
+    
+</div>
+<style>
+    .table{
+        margin:10rem;
+        
+    }
+    td{
+border:none !important;
+/* margin:2rem !important; */
+    }
+</style>

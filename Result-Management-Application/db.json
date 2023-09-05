@@ -1,0 +1,37 @@
+{
+  "ResultList": [
+    {
+      "RollNo": "2",
+      "Name": "Admin",
+      "DOB": "2022-12-15T18:30:00.000Z",
+      "Score": "99",
+      "id": 2
+    },
+    {
+      "RollNo": "1",
+      "Name": "Student",
+      "DOB": "2022-12-05T18:30:00.000Z",
+      "Score": "92",
+      "id": 4
+    },
+    {
+      "RollNo": "3",
+      "Name": "Anshu",
+      "DOB": "2022-12-04T18:30:00.000Z",
+      "Score": "98",
+      "id": 6
+    }
+  ],
+  "Teachers": [
+    {
+      "name": "admin",
+      "password": "admin"
+    }
+  ],
+  "students": [
+    {
+      "name": "student",
+      "password": "student"
+    }
+  ]
+}

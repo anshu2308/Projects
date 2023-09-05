@@ -1,0 +1,62 @@
+<div class="bootstrap-wrapper">
+    <div class="container ">
+        <div class="row">
+            <div class="col-md-6 offset-md-3 ">
+            <mat-card >
+            <div class="container row text-center">
+                <img style="height:5rem;width:5rem;" src="../../assets/login2.jpg" alt="">
+                <h1 class="text-center mt-20 ml-20 ">Register Here</h1>
+            </div>
+                <form  [formGroup]="signupForm"  (ngSubmit)="register()">
+                
+                <mat-form-field class="full-width" appearance="outline">
+                    <mat-label>UserName</mat-label>
+                    <input formControlName="username"  [(ngModel)]="user.username" name="username" matInput >
+                    <span style="color:red" *ngIf="username && username.invalid && username.touched">**Invalid Username</span>
+                  <mat-hint>*Username must be unique!!</mat-hint>
+                </mat-form-field>
+           <div class="row"><mat-form-field class="half-width ml-20" appearance="outline">
+            <mat-label>Password</mat-label>
+            <input formControlName="password" [(ngModel)]="user.password" name="password" type="password" matInput>
+            <span style="color:red" *ngIf="password && password.invalid && password.touched">**Invalid Password</span>
+            <!-- <mat-hint *ngIf="password && password.invalid && password.touched">*min-length:3</mat-hint> -->
+        </mat-form-field>
+        <mat-form-field class="ml-20 half-width" appearance="outline">
+            <mat-label>Confirm Password</mat-label>
+            <input formControlName="cpassword" (ngModel)="user.password" name="cpassword" type="password" matInput>
+            <span style="color:red"
+                *ngIf="cpassword && password && (cpassword.value!=password.value) && cpassword.touched">**Invalid
+                Password</span>
+        </mat-form-field></div>
+                <mat-form-field class="full-width" appearance="outline">
+                    <mat-label>EmailId</mat-label>
+                    <input formControlName="emailId" [(ngModel)]="user.emailId" name="emailId" matInput >
+                <span style="color:red" *ngIf="emailId && emailId.invalid && emailId.touched">**Invalid Email</span>
+                </mat-form-field>
+                <mat-form-field class="full-width" appearance="outline">
+                    <mat-label>Phone(Optional)</mat-label>
+                    <input formControlName="phone" [(ngModel)]="user.phone" name="phone" matInput >
+                <span style="color:red" *ngIf="phone && phone.invalid  && phone.touched">**Invalid Phone number</span>
+                </mat-form-field>
+              
+                <mat-form-field appearance="outline">
+                    <mat-label>Category</mat-label>
+                    <mat-select [(ngModel)]="user.userType" name="user.userType">
+                        <mat-option *ngFor="let r of roles" [value]="r">
+                            {{r.roleName}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <div class="container">
+                    <a class="mr-20" [routerLink]="['/login']">Existing User?Login here</a>
+                    <button class=" register"  type="submit" mat-raised-button color="primary">Register</button>
+                    <button class="reset" type="reset" style="margin-left:20px" mat-raised-button >Reset</button>
+                </div>
+               </form>
+       
+        </mat-card>
+            </div>
+          
+        </div>
+    </div>
+</div>

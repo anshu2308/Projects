@@ -1,0 +1,34 @@
+<mat-card>
+        <h1 class="text-center mb-20">Confirm Your Purchase</h1>
+        <div>
+                <form class=" offset-md-3">
+        
+                        <mat-form-field class="half-width" appearance="outline"><input [(ngModel)]="purchasedProduct.pName" name="pName" readonly
+                                        matInput><mat-label>Product
+                                        Name</mat-label></mat-form-field>
+                        <mat-form-field class="half-width" appearance="outline"><input [(ngModel)]="purchasedProduct.pCode" name="pCode" readonly
+                                        matInput><mat-label>Product
+                                        Code</mat-label></mat-form-field>
+                        <mat-form-field class="half-width" appearance="outline"><textarea [(ngModel)]="purchasedProduct.pDescription" readonly
+                                        name="pDescription" matInput
+                                        readonly></textarea><mat-label>Description</mat-label></mat-form-field>
+                        <mat-form-field class="half-width" appearance="outline"><input [(ngModel)]="purchasedProduct.price" name="price" matInput
+                                        readonly><mat-label>
+                                        Price </mat-label></mat-form-field>
+                        <mat-form-field class="half-width" appearance="outline"><input readonly [(ngModel)]="date" name="date" matInput
+                                        readonly><mat-label>
+                                        Date </mat-label></mat-form-field>
+                        <mat-form-field appearance="outline"><input [(ngModel)]="currentuser.username" name="customer"
+                                        matInput><mat-label>Your Name</mat-label></mat-form-field>
+                        <mat-form-field required appearance="outline"><input [(ngModel)]="location" name="location"
+                                        matInput><mat-label>Your
+                                        Location</mat-label></mat-form-field>
+                        <div class="container text-center">
+                                <button (click)="purchase()" mat-raised-button color="primary">Purchase</button>
+                                <button routerLink="/customer/products" mat-raised-button class="ml-20">Close</button>
+                        </div>
+        
+                </form>
+        
+        </div>
+</mat-card>

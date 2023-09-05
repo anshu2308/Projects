@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="formstyle.css">
+    <script src="form.js"></script>
+  
+</head>
+
+<body>
+    <div class="container">
+        <div class="panel panel-form ">
+            <div class="panel-heading">
+                <center>Student Enrollment Form</center>
+            </div>
+            <div class="panel-body">
+                <div class="col-md-6">
+                    <form id="form" onsubmit=" return nameValidation()">
+                        <div class="row-1 form-group">
+                            <label class="Student-Name  col-xs-4">Name</label>
+                            <input class="Student-Name " id="Name" type="text" Placeholder="Enter Name" required>
+                            <span class="Error-Message" id="InvalidName"> **Invalid</span>
+                        </div>
+                        <div class="row-2 form-group">
+                            <label class="Student-Email col-xs-4">Email</label>
+                            <input class="Student-Email" id="Email" type="text" Placeholder="Enter Your Email" required>
+                            <span class="Error-Message" id="InvalidEmail"> **Invalid</span>
+                        </div>
+                        <div class="row-3 form-group">
+                            <label class="Website col-xs-4">Website</label>
+                            <input class="Website" id="websiteUrl" type="text" Placeholder="Enter Your Website" required>
+                            <span class="Error-Message" id="InvalidWebsite"> **Invalid</span>
+                        </div>
+                        <div class="row-4 form-group">
+                            <label class="Image-link col-xs-4">Image link</label>
+                            <input class="Image-link" type="text" id="imageLink" Placeholder="Enter Image-link" required>
+                            <span class="Error-Message" id="InvalidImage"> **Invalid</span>
+                        </div>
+                        <div class="row-5 form-check">
+                            <label class="Gender col-xs-4">Gender</label>
+                            <div class="col-xs-8">
+                                <input class="form-check-input " type="radio" name="Gender" id="Male" value="option1"
+                                    checked>
+                                <label class="form-check-label" for="Male">Male</label><br>
+                                <input class="form-check-input" type="radio" name="Gender" id="Female" value="option2">
+                                <label class="form-check-label" for="Female">Female</label>
+                            </div>
+                        </div>
+                        <div class="row-5 form-check">
+                            <label class=" col-md-4">Skills</label>
+                            <input class="form-check-input ckecks" type="checkbox" value="Java" name="Skills" id="Java" checked>
+                            <label class="form-check-label" for="Java">
+                                Java
+                            </label>
+                            <input class="form-check-input checks" type="checkbox" name="Skills" value="HTML" id="HTML">
+                            <label class="form-check-label" for="HTML">
+                                HTML
+                            </label>
+                            <input class="form-check-input checks" type="checkbox" name="Skills" value="CSS" id="CSS">
+                            <label class="form-check-label" for="CSS">
+                                CSS
+                            </label>
+
+                        </div>
+                        <div class="button-row">
+                            <button type="submit"  id="enroll-submit" class="btn btn-primary ">Enroll Submit</button>
+                            <button id="clear" type="reset" class="btn btn-danger">Clear</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-6" id="Enrolled-students">
+                    <div class="row">
+                        <b><center>Enrolled Students</center></b>
+                    </div>
+                    <div class=" studentRecord ">
+                        <div class="record-heading">
+                          
+                            <table class="table " id="display">
+                                <tr>
+                                    <th colspan="2">Description</th>
+                                    <th>Image</th>
+                                </tr>
+                            </table>
+                        </div> 
+
+                    </div>
+                </div>
+            </div>
+            <div class="panel-footer">
+                <center>&copy;Copyright 2020-2021 by Fresher Training</center>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

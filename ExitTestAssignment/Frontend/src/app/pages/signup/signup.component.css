@@ -1,0 +1,22 @@
+
+.image{
+    margin-top:10rem;
+}
+
+mat-card{
+padding-top: 2px;
+}
+.register {
+    margin-left: 60px;
+}
+button{
+    width:6rem;
+}
+.reset{
+background-color: rgb(242, 214, 214);}
+.ml-20{
+margin-left:10px;
+}
+.half-width{
+    width:45%;
+}

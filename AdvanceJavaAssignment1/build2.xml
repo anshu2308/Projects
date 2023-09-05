@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+   <project name="AntAssignment" default="compress" basedir=".">
+   <property name="main.dir" value="."/>
+   <property name="csv.dir"  value="Assigment Links"/>
+  <property name="classes.dir" value="target/classes"/>
+
+<target name="init">
+        <mkdir dir="build/classes" />
+        <mkdir dir="dist"/>
+    </target>
+ 
+    <target name="compile" depends="init">
+        <javac srcdir="src" destdir="build/classes" />
+    </target>
+     
+    <target name="compress" depends="compile">
+            <jar destfile="App.jar" basedir="build/classes" />
+    </target>
+     
+    <target name="clean">
+        <delete dir="build" />
+        <delete dir="dist" />
+    </target>
+
+</project>

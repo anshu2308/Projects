@@ -1,0 +1,37 @@
+
+<div class="header">
+
+    <mat-toolbar >
+        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <span><h1>Library Management System</h1></span>
+        <span class="example-spacer"></span>
+
+    </mat-toolbar>
+</div>
+<div class="container">
+
+    <mat-card>
+        <mat-card-content>
+           <h1>Teacher Login</h1>
+           <hr>
+           <form [formGroup]="loginForm" >
+            <div class="mb-3">
+                <mat-form-field appearance="outline">
+                <label for="username" class="form-label">Username</label>
+                <input  matInput formControlName="name" type="text" class="form-control" id="username" required>
+                </mat-form-field>
+            </div>
+            <div class="mb-3">
+                <mat-form-field appearance="outline">
+                    <label for="passowrd" class="form-label">Password</label>
+                    <input  matInput type="password" formControlName="password" class="form-control" id="password" required >
+                </mat-form-field>
+            </div>
+            <button type="submit" (click)="login()" class="btn btn-primary">Login</button>
+        <button routerLink="" class="btn btn-secondary">cancel</button>
+        </form>
+        </mat-card-content>
+    </mat-card>
+</div>

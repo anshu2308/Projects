@@ -1,0 +1,11 @@
+.customer,.vendor{
+    margin-top:5rem;
+    background-color: #f7a3bf;
+    padding-top: 5rem;
+    padding-bottom: 8rem;
+    border-radius:15%
+}
+.customer:hover,.vendor:hover{
+    border:2px groove #f7a3bf  ;
+    background-color:white;
+}

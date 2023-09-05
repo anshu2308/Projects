@@ -1,0 +1,33 @@
+<div class="header">
+   
+    <mat-toolbar >
+        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <span><h1>Library Management System</h1></span>
+        <span class="example-spacer"></span>
+        <button class="btn1" mat-raised-button  routerLink="">Log out</button>
+    </mat-toolbar>
+</div>
+
+<div class="container">
+    <mat-card>
+        <mat-card-content>
+            <h1>Find Result</h1>
+            <hr>
+            <form [formGroup]="searchForm" (ngSubmit)="search()">
+                <div class="mb-3">
+                    <label for="rollno" class="form-label">Roll No:</label>
+                    <input formControlName="RollNo" type="text" class="form-control" id="rollno" required >
+                   <span style="color:red" *ngIf="rollNo && rollNo.invalid && rollNo.touched" >**Invalid</span>
+                </div>
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name:</label>
+                    <input formControlName="Name" class="form-control" id="name" required>
+                </div>
+                <button [disabled]="searchForm.invalid" type="submit"  class="btn btn-primary">Search</button>
+                        <button type="reset" class="btn btn2">Reset</button>
+            </form>
+        </mat-card-content>
+    </mat-card>
+</div>

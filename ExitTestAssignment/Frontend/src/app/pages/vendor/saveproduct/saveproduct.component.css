@@ -1,0 +1,21 @@
+
+.clear{
+    background-color: rgb(242, 214, 214);
+}
+button{
+    width:6rem;
+}
+.container{
+    line-height: 2ch;
+}
+mat-form-field{
+    margin:3px;
+}
+h1{
+    font-family: monospace;
+    color: #ff4081;
+
+}
+.ml-10{
+    margin-left: 14px;;
+}

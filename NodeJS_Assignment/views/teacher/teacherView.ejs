@@ -1,0 +1,58 @@
+
+    <a href="/teacher/login" class="ml-5" style="margin-top:5px;"><span class="glyphicon glyphicon-chevron-left mt-5"></span>Back</a>
+<button style="float:right" class="btn">
+    <a href="/teacher/addStudent">Add Student</a>
+</button>
+    <div class="container">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Roll.No</th>
+                    <th scope="col">DateOfBirth</th>
+                    <th scope="col">Score</th>
+                    <th scope="col">Action</th>
+    
+                </tr>
+            </thead>
+            <tbody>
+           <tr>
+                    <script> var sno = 1;</script>
+                    <% students.forEach(function(student) { %>
+                        <th scope="row">
+                            <script>
+    
+                                document.write(sno)
+                                sno++; 
+                            </script>
+                        </th>
+                        <td>
+                            <%= student.name %>
+                        </td>
+                        <td>
+                            <%= student.rollno %>
+                        </td>
+    
+                        <script>
+                            var str = '<%= student.Dateofbirth %>'
+                            var str2 = str.slice(0, 15)
+                            document.write("<td>" + str2 + "</td>")
+                        </script>
+                        <td>
+                            <%= student.score %>
+                        </td>
+                        <td><a href="/teacher/delet/<%=student.id%>" style="color:red">
+                            <span class="glyphicon glyphicon-trash mr-3"></span>
+                        </a>
+                          
+                            <a href="/teacher/edit/<%=student.id%>"><span class="glyphicon glyphicon-pencil"></span></a>
+                        </td>
+                </tr>
+    
+    
+    
+                <% }); %> 
+            </tbody>
+        </table>
+    </div>

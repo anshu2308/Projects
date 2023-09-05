@@ -1,0 +1,14 @@
+h1{
+    font-family: monospace;
+        color: #ff4081;
+}
+mat-card{
+    min-height:100%;
+}
+mat-form-field{
+    margin:5px;
+    margin-left:20px;
+}
+form{
+    width:30rem;
+}
